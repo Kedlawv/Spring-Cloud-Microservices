@@ -1,0 +1,10 @@
+CurrencyExchange http://localhost:8000/currency-exchange/from/USD/to/PLN
+CurrencyConversion RestTemplate http://localhost:8100/currency-conversion/from/USD/to/PLN/quantity/10
+CurrencyConversion Feign http://localhost:8100/currency-conversion-feign/from/USD/to/PLN/quantity/10
+
+Eureka http://localhost:8761/
+Zipkin http://localhost:9411/
+
+API Gateway http://localhost:8765/
+Feign http://localhost:8765/cc-new/from/USD/to/PLN/quantity/10
+RestTemplate http://localhost:8765/currency-conversion/from/USD/to/PLN/quantity/10
