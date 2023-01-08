@@ -13,7 +13,7 @@ services:
       - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://naming-server:8761/eureka
 
   currency-conversion:
-    image: kedlawv/currency-conversion-service:0.0.1-SNAPSHOT
+    image: kedlawv/currency-conversion-service:0.0.2-SNAPSHOT
     mem_limit: 700m
     ports:
       - "8100:8100"
