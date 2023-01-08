@@ -24,6 +24,18 @@ services:
     environment:
       - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://naming-server:8761/eureka
 
+  api-gateway:
+    image: kedlawv/api-gateway:0.0.1-SNAPSHOT
+    mem_limit: 700m
+    ports:
+      - "8765:8765"
+    networks:
+      - currency-network
+    depends_on:
+      - naming-server
+    environment:
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=http://naming-server:8761/eureka
+
   naming-server:
     image: kedlawv/naming-server:0.0.1-SNAPSHOT
     mem_limit: 700m
